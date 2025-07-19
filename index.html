@@ -37,7 +37,659 @@
 </head>
 
 <body>
+    <!-- ESTRUCTURA PRINCIPAL CON CSS GRID para movil-->
+    <div class="portfolio">
+        <!-- ========================================
+                 HEADER CON NAVEGACIÓN RESPONSIVE
+        ======================================== -->
+        <header class="header">
+            <div class="header__container">
+                <!-- LOGO A LA IZQUIERDA -->
+                <div class="header__logo">
+                    <a href="#inicio">
+                        <img src="imagenes/LOGO-OFICIAL-SINFONDO.png" alt="Logo GERB Developer" />
+                    </a>
+                    <h3>GERB DEVELOPER</h3>
+                </div>
 
+                <!-- MENÚ MÓVIL -->
+                <input type="checkbox" id="menu-toggle" class="header__menu-toggle" />
+                <label for="menu-toggle" class="header__menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- NAVEGACIÓN A LA DERECHA -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#inicio" class="nav__link nav__link--active">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#sobre-mi" class="nav__link">Sobre Mí</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#proyectos" class="nav__link">Proyectos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#habilidades" class="nav__link">Habilidades</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#testimonios" class="nav__link">Testimonios</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contacto" class="nav__link">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ========================================
+                 CONTENIDO PRINCIPAL
+        ======================================== -->
+        <main class="main">
+            <!-- SECCIÓN HERO -->
+            <section id="inicio" class="hero">
+                <div class="hero__container">
+                    <h1 class="hero__title">Giovanni E. Ramirez Berrocal</h1>
+                    <h2 class="hero__subtitle">Desarrollador Web Full Stack</h2>
+                    <p class="hero__description">
+                        Especialista en crear experiencias web modernas, responsive y
+                        optimizadas. Transformo ideas en aplicaciones web funcionales y
+                        atractivas usando las últimas tecnologías del desarrollo frontend
+                        y backend.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#proyectos" class="button button--primary">Ver Proyectos</a>
+                        <a href="#contacto" class="button button--secondary">Contáctame</a>
+                    </div>
+                </div>
+            </section>
+            <!-- SECCIÓN SOBRE MÍ -->
+            <section id="sobre-mi" class="about">
+                <div class="about__container">
+                    <!-- SECCIÓN SUPERIOR: Descripción + Foto -->
+                    <div class="about__header">
+                        <div class="about__content">
+                            <h2 class="about__title">Sobre Mí</h2>
+                            <p class="about__text">
+                                Soy un desarrollador web apasionado con más de 3 años de
+                                experiencia creando soluciones digitales innovadoras. Me
+                                especializo en el desarrollo frontend y backend con
+                                tecnologías modernas como React, Node.js y bases de datos.
+                            </p>
+                            <p class="about__text">
+                                Mi enfoque se centra en escribir código limpio, mantenible y
+                                escalable, siempre siguiendo las mejores prácticas de la
+                                industria. Me encanta aprender nuevas tecnologías y enfrentar
+                                desafíos complejos que me permitan crecer profesionalmente.
+                            </p>
+                            <p class="about__text">
+                                Creo firmemente en la importancia de la colaboración y la
+                                comunicación efectiva en el desarrollo de software. Disfruto
+                                trabajando en equipos multidisciplinarios donde puedo aportar
+                                mis conocimientos técnicos y aprender de otros profesionales.
+                            </p>
+                            <p class="about__text">
+                                Mi objetivo es crear aplicaciones web que no solo sean
+                                funcionales y eficientes, sino que también brinden
+                                experiencias excepcionales a los usuarios finales, combinando
+                                diseño atractivo con rendimiento óptimo.
+                            </p>
+                        </div>
+                        <!-- FOTO PERSONAL -->
+                        <div class="about__image">
+                            <img src="imagenes/CARNET-1.jpg" alt="foto de Giovanni Ramirez" />
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN INFERIOR: Timeline + Valores -->
+                    <div class="about__bottom">
+                        <!-- TIMELINE DE EXPERIENCIA -->
+                        <div class="about__timeline">
+                            <h3 class="about__timeline-title">🚀 Mi Trayectoria</h3>
+                            <div class="timeline-item">
+                                <span class="timeline-item__date">2022-2025</span>
+                                <div class="timeline-item__content">
+                                    <h4>Senior Full Stack Developer</h4>
+                                    <p>
+                                        Liderando proyectos complejos con React, Node.js y AWS
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-item__date">2021-2022</span>
+                                <div class="timeline-item__content">
+                                    <h4>Frontend Developer</h4>
+                                    <p>
+                                        Especialización en React y desarrollo de interfaces
+                                        modernas
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-item__date">2020-2021</span>
+                                <div class="timeline-item__content">
+                                    <h4>Junior Developer</h4>
+                                    <p>
+                                        Primeros pasos en desarrollo web con HTML, CSS y
+                                        JavaScript
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-item__date">2019</span>
+                                <div class="timeline-item__content">
+                                    <h4>Bootcamp Graduado</h4>
+                                    <p>Certificación en Desarrollo Web Full Stack</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- VALORES PERSONALES -->
+                        <div class="about__values">
+                            <h3 class="about__values-title">💎 Mis Valores</h3>
+                            <div class="values-grid">
+                                <div class="value-card">
+                                    <span class="value-card__icon">💡</span>
+                                    <h4 class="value-card__title">Innovación</h4>
+                                    <p class="value-card__desc">
+                                        Siempre busco soluciones creativas
+                                    </p>
+                                </div>
+
+                                <div class="value-card">
+                                    <span class="value-card__icon">🎯</span>
+                                    <h4 class="value-card__title">Calidad</h4>
+                                    <p class="value-card__desc">
+                                        Código limpio y bien documentado
+                                    </p>
+                                </div>
+
+                                <div class="value-card">
+                                    <span class="value-card__icon">⚡</span>
+                                    <h4 class="value-card__title">Eficiencia</h4>
+                                    <p class="value-card__desc">Optimización en cada línea</p>
+                                </div>
+
+                                <div class="value-card">
+                                    <span class="value-card__icon">🤝</span>
+                                    <h4 class="value-card__title">Colaboración</h4>
+                                    <p class="value-card__desc">Trabajo en equipo efectivo</p>
+                                </div>
+
+                                <div class="value-card">
+                                    <span class="value-card__icon">📚</span>
+                                    <h4 class="value-card__title">Aprendizaje</h4>
+                                    <p class="value-card__desc">Actualización constante</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECCIÓN PROYECTOS -->
+            <section id="proyectos" class="projects">
+                <div class="projects__container">
+                    <div class="projects__header">
+                        <h2 class="projects__title">Mis Proyectos</h2>
+                        <p class="projects__subtitle">
+                            Una selección de mis trabajos más destacados
+                        </p>
+                    </div>
+
+                    <div class="projects__grid">
+                        <!-- PROYECTO 1 -->
+                        <article class="project-card">
+                            <div class="project-card__inner">
+                                <!-- FRENTE DE LA TARJETA -->
+                                <div class="project-card__front">
+                                    <div class="project-card__image">
+                                        <img src="imagenes/solitario.png" alt="Juego solitario" />
+                                    </div>
+                                    <div class="project-card__content">
+                                        <h3 class="project-card__title">Juego solitario</h3>
+                                        <p class="project-card__description">
+                                            Juego clásico de Solitario desarrollado con JavaScript
+                                            vanilla. Interfaz intuitiva, animaciones suaves y lógica
+                                            de juego completa.
+                                        </p>
+                                        <div class="project-card__tech">
+                                            <span class="tech-tag">HTML</span>
+                                            <span class="tech-tag">CSS3</span>
+                                            <span class="tech-tag">Javascripts</span>
+                                            <span class="tech-tag">Game Logic</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- REVERSO DE LA TARJETA -->
+                                <div class="project-card__back">
+                                    <h3 class="project-card__back-title">Características</h3>
+                                    <p class="project-card__back-text">
+                                        • Autenticación de usuarios<br />
+                                        • Carrito de compras persistente<br />
+                                        • Integración con Stripe<br />
+                                        • Panel de administración<br />
+                                        • Responsive design<br />
+                                        • SEO optimizado
+                                    </p>
+                                    <div class="project-card__back-buttons">
+                                        <a href="https://gerb-developer.github.io/Solitario/"
+                                            class="project-card__back-button" target="_blank">👁️ Ver</a>
+                                        <a href="https://github.com/GERB-DEVELOPER/Solitario" target="_blank"
+                                            class="project-card__back-button">💻 Código</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- PROYECTO 2 -->
+                        <article class="project-card">
+                            <div class="project-card__inner">
+                                <div class="project-card__front">
+                                    <div class="project-card__image">
+                                        <img src="imagenes/app.jpg" alt="App de Gestion" />
+                                    </div>
+                                    <div class="project-card__content">
+                                        <h3 class="project-card__title">App de Gestión</h3>
+                                        <p class="project-card__description">
+                                            Aplicación web para gestión de proyectos con sistema de
+                                            tareas, calendario y colaboración en tiempo real.
+                                        </p>
+                                        <div class="project-card__tech">
+                                            <span class="tech-tag">Vue.js</span>
+                                            <span class="tech-tag">Express</span>
+                                            <span class="tech-tag">Socket.io</span>
+                                            <span class="tech-tag">PostgreSQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-card__back">
+                                    <h3 class="project-card__back-title">Características</h3>
+                                    <p class="project-card__back-text">
+                                        • Gestión de proyectos<br />
+                                        • Sistema de tareas<br />
+                                        • Chat en tiempo real<br />
+                                        • Calendario integrado<br />
+                                        • Notificaciones push<br />
+                                        • Dashboard analítico
+                                    </p>
+                                    <div class="project-card__back-buttons">
+                                        <a href="#" class="project-card__back-button">👁️ Ver</a>
+                                        <a href="#" class="project-card__back-button">💻 Código</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- PROYECTO 3 -->
+                        <article class="project-card">
+                            <div class="project-card__inner">
+                                <div class="project-card__front">
+                                    <div class="project-card__image">
+                                        <img src="imagenes/porafolio.jpg" alt="Portafolio Creativo" />
+                                    </div>
+                                    <div class="project-card__content">
+                                        <h3 class="project-card__title">Portfolio Creativo</h3>
+                                        <p class="project-card__description">
+                                            Sitio web portfolio para artista visual con galería
+                                            interactiva y efectos visuales avanzados.
+                                        </p>
+                                        <div class="project-card__tech">
+                                            <span class="tech-tag">HTML5</span>
+                                            <span class="tech-tag">CSS3</span>
+                                            <span class="tech-tag">JavaScript</span>
+                                            <span class="tech-tag">GSAP</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-card__back">
+                                    <h3 class="project-card__back-title">Características</h3>
+                                    <p class="project-card__back-text">
+                                        • Galería interactiva<br />
+                                        • Animaciones GSAP<br />
+                                        • Lazy loading<br />
+                                        • Lightbox personalizado<br />
+                                        • Optimización de imágenes<br />
+                                        • Performance 98/100
+                                    </p>
+                                    <div class="project-card__back-buttons">
+                                        <a href="#" class="project-card__back-button">👁️ Ver</a>
+                                        <a href="#" class="project-card__back-button">💻 Código</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- SECCIÓN HABILIDADES -->
+            <section id="habilidades" class="skills">
+                <div class="skills__container">
+                    <div class="skills__header">
+                        <h2 class="skills__title">Mis Habilidades</h2>
+                        <p class="skills__subtitle">
+                            Tecnologías y herramientas que domino
+                        </p>
+                    </div>
+
+                    <div class="skills__grid">
+                        <!-- FRONTEND -->
+                        <div class="skill-category">
+                            <h3 class="skill-category__title">Frontend</h3>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">HTML5</span>
+                                    <span class="skill__percentage">95%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--html"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">CSS3 / SASS</span>
+                                    <span class="skill__percentage">90%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--css"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">JavaScript</span>
+                                    <span class="skill__percentage">85%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--js"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">React</span>
+                                    <span class="skill__percentage">80%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--react"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BACKEND -->
+                        <div class="skill-category">
+                            <h3 class="skill-category__title">Backend</h3>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Node.js</span>
+                                    <span class="skill__percentage">75%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--node"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Express.js</span>
+                                    <span class="skill__percentage">80%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--react"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">MongoDB</span>
+                                    <span class="skill__percentage">70%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--node"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">PostgreSQL</span>
+                                    <span class="skill__percentage">75%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--node"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HERRAMIENTAS -->
+                        <div class="skill-category">
+                            <h3 class="skill-category__title">Herramientas</h3>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Git / GitHub</span>
+                                    <span class="skill__percentage">85%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--git"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Webpack</span>
+                                    <span class="skill__percentage">70%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--node"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Docker</span>
+                                    <span class="skill__percentage">65%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--node"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">AWS</span>
+                                    <span class="skill__percentage">60%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress skill__progress--node"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECCIÓN TESTIMONIOS -->
+            <section id="testimonios" class="testimonials">
+                <div class="testimonials__container">
+                    <div class="testimonials__header">
+                        <h2 class="testimonials__title">Testimonios</h2>
+                        <p class="testimonials__subtitle">
+                            Lo que dicen mis clientes sobre mi trabajo
+                        </p>
+                    </div>
+
+                    <div class="testimonials__grid">
+                        <!-- TESTIMONIO 1 -->
+                        <article class="testimonial">
+                            <p class="testimonial__quote">
+                                "Juan desarrolló nuestra plataforma de e-commerce desde cero.
+                                Su atención al detalle y conocimiento técnico superaron
+                                nuestras expectativas. El sitio es rápido, intuitivo y ha
+                                aumentado nuestras ventas en un 40%."
+                            </p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__avatar">
+                                    <img src="imagenes/yeka4.jpg" alt="María González, CEO de TechStore" />
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4>María González</h4>
+                                    <p>CEO, TechStore</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- TESTIMONIO 2 -->
+                        <article class="testimonial">
+                            <p class="testimonial__quote">
+                                "Profesional, eficiente y siempre dispuesto a ir más allá.
+                                Juan no solo programó nuestra aplicación, sino que también nos
+                                asesoró en la arquitectura y mejores prácticas. Altamente
+                                recomendado."
+                                <br />
+                                <br />
+                            </p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__avatar">
+                                    <img src="imagenes/andres.jpg" alt="Carlos López, CTO de InnovateLab" />
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4>Carlos López</h4>
+                                    <p>CTO, InnovateLab</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- TESTIMONIO 3 -->
+                        <article class="testimonial">
+                            <p class="testimonial__quote">
+                                "El portfolio que Juan creó para mi estudio de diseño es
+                                simplemente espectacular. Cada animación y transición está
+                                perfectamente ejecutada. Mis clientes quedan impresionados
+                                desde el primer momento."
+                            </p>
+                            <div class="testimonial__author">
+                                <div class="testimonial__avatar">
+                                    <img src="imagenes/4.jpg" alt="Ana Rodríguez, Directora Creativa de ArtStudio" />
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4>Ana Rodríguez</h4>
+                                    <p>Directora Creativa, ArtStudio</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- SECCIÓN CONTACTO -->
+            <section id="contacto" class="contact">
+                <div class="contact__container">
+                    <div class="contact__header">
+                        <h2 class="contact__title">Trabajemos Juntos</h2>
+                        <p class="contact__subtitle">
+                            ¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas
+                        </p>
+                    </div>
+
+                    <div class="contact__content">
+                        <!-- INFORMACIÓN DE CONTACTO -->
+                        <div class="contact__info">
+                            <div class="contact-item">
+                                <div class="contact-item__icon">📧</div>
+                                <div class="contact-item__content">
+                                    <h3>Email</h3>
+                                    <p>ramirezberrocalgiovanni@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item__icon">📱</div>
+                                <div class="contact-item__content">
+                                    <h3>Teléfono</h3>
+                                    <p>+51 956 785 457</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item__icon">📍</div>
+                                <div class="contact-item__content">
+                                    <h3>Ubicación</h3>
+                                    <p>Lima, Perú</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item__icon">⏰</div>
+                                <div class="contact-item__content">
+                                    <h3>Horario</h3>
+                                    <p>Lun - Vie: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FORMULARIO DE CONTACTO -->
+                        <div class="contact__form">
+                            <form class="form">
+                                <div class="form__group">
+                                    <label for="nombre" class="form__label">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" class="form__input"
+                                        placeholder="Tu nombre completo" required />
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="email" class="form__label">Email</label>
+                                    <input type="email" id="email" name="email" class="form__input"
+                                        placeholder="tu.email@ejemplo.com" required />
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="asunto" class="form__label">Asunto</label>
+                                    <input type="text" id="asunto" name="asunto" class="form__input"
+                                        placeholder="¿En qué puedo ayudarte?" required />
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="mensaje" class="form__label">Mensaje</label>
+                                    <textarea id="mensaje" name="mensaje" class="form__textarea"
+                                        placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                                </div>
+
+                                <button type="submit" class="form__button">
+                                    Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+      
+         <!-- ========================================
+                         FOOTER
+         ======================================== -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/giovanni-emilio-ramirez-28b5161b8/" class="social-link"
+                aria-label="LinkedIn" target="_blank">💼</a>
+            <a href="https://github.com/GERB-DEVELOPER" class="social-link" aria-label="GitHub" target="_blank">💻</a>
+            <a href="https://www.facebook.com/giovanni.ramirezberrocal" class="social-link" aria-label="Twitter"
+                target="_blank">🐦</a>
+            <a href="https://www.instagram.com/ramirezberrocalgiovanni/" class="social-link" aria-label="Instagram"
+                target="_blank">📷</a>
+        </div>
+        <p class="footer__text">
+            © 2025 Giovanni Ramirez Berrocal. Todos los derechos reservados.
+            Desarrollado con ❤️ y muchas tazas de café ☕
+        </p>
+    </div>
+</footer>
+    </div>
 </body>
 
 </html>
