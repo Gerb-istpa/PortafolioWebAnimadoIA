@@ -371,7 +371,7 @@ body {
 
         /* ========================================
                        SECCIÓN SOBRE MÍ (BEM)
-                       ======================================== */
+         ======================================== */
         .about {
             padding: var(--spacing-4xl) var(--spacing-md);
             background-color: var(--color-gray-50);
@@ -575,165 +575,310 @@ body {
                 }
             }
         }
-    }
-}
 
-/* ========================================
-   MEDIA QUERIES PARA ADAPTABILIDAD 
-======================================== */
-@media (min-width: 640px) {
-    .portfolio {
-        .main {
+        /* ========================================
+       SECCIÓN PROYECTOS (BEM)
+       ======================================== */
+        .projects {
+            padding: var(--spacing-4xl) var(--spacing-md);
+            background-color: var(--color-white);
 
-            /* ========================================
-               SECCIÓN HERO (BEM)
-               ======================================== */
-            .hero {
-                .hero__container {
-                    .hero__title {
-                        font-size: var(--font-size-5xl);
-                    }
+            .projects__container {
+                max-width: 1280px;
+                margin: 0 auto;
 
-                    .hero__buttons {
-                        flex-direction: row;
-                        justify-content: center;
+                .projects__header {
+                    text-align: center;
+                    margin-bottom: var(--spacing-3xl);
+
+                    .projects__title {
+                        font-size: var(--font-size-3xl);
+                        color: var(--color-gray-900);
+                        margin-bottom: var(--spacing-md);
+                        position: relative;
+                        display: inline-block;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -8px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background: linear-gradient(50deg,
+                                    var(--color-accent),
+                                    var(--color-secondary));
+                            animation: underline-expand 2s ease-in-out infinite;
+                        }
+
+                        display: inline-block;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -8px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background: linear-gradient(50deg,
+                                    var(--color-accent),
+                                    var(--color-secondary));
+                            animation: underline-expand 2s ease-in-out infinite;
+                        }
                     }
                 }
-            }
 
+                .projects__grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: var(--spacing-xl);
 
-        }
-    }
-}
+                    /* TARJETAS DE PROYECTO CON FLIP EFFECT */
+                    .project-card {
+                        perspective: 1000px;
+                        height: 450px;
 
-/* RESPONSIVE GRID PARA TABLET  @media (min-width: 768px) {*/
-@media (min-width: 768px) {
-    .portfolio {
-        .header {
-            .header__container {
-                .header__menu-button {
-                    display: none;
-                }
+                        .project-card__inner {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            transition: transform 0.8s;
+                            transform-style: preserve-3d;
+                            cursor: pointer;
 
-                .nav {
-                    position: static;
-                    transform: none;
-                    opacity: 1;
-                    visibility: visible;
-                    box-shadow: none;
-                    background: transparent;
+                            .project-card__front,
+                            .project-card__back {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                border-radius: var(--radius-xl);
+                                box-shadow: var(--shadow-lg);
+                                display: flex;
+                                flex-direction: column;
+                                overflow: hidden;
 
-                    .nav__list {
-                        display: flex;
-                        padding: 0;
-                        gap: var(--spacing-lg);
+                                .project-card__front {
+                                    background-color: var(--color-white);
 
-                        .nav__item {
-                            border: none;
+                                    .project-card__image {
+                                        height: 220px;
+                                        background-color: var(--color-gray-200);
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: var(--color-gray-500);
+                                        font-size: var(--font-size-sm);
 
-                            .nav__link {
-                                padding: var(--spacing-sm) var(--spacing-md);
-                                border-radius: var(--radius-3xl);
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            /* border-radius: var(--radius-xl); */
+                                        }
+                                    }
+
+                                    .project-card__content {
+                                        padding: var(--spacing-lg);
+                                        flex: 1;
+                                        display: flex;
+                                        flex-direction: column;
+
+                                        .project-card__title {
+                                            font-size: var(--font-size-xl);
+                                            font-weight: 600;
+                                            color: var(--color-gray-900);
+                                            margin-bottom: var(--spacing-sm);
+                                        }
+
+                                        .project-card__description {
+                                            color: var(--color-gray-600);
+                                            flex: 1;
+                                            margin-bottom: var(--spacing-md);
+                                        }
+
+                                        .project-card__tech {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            gap: var(--spacing-xs);
+
+                                            .tech-tag {
+                                                font-size: var(--font-size-xs);
+                                                background-color: var(--color-gray-100);
+                                                color: var(--color-gray-700);
+                                                padding: var(--spacing-xs) var(--spacing-sm);
+                                                border-radius: var(--radius-full);
+                                                font-weight: 500;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
+
         }
-
-
     }
-}
 
-/* RESPONSIVE GRID PARA DESKTOP */
-@media (min-width: 1024px) {
-    .portfolio {
-        grid-template-areas:
-            "header header"
-            "main main"
-            "footer footer";
+    /* ========================================
+   MEDIA QUERIES PARA ADAPTABILIDAD 
+======================================== */
+    @media (min-width: 640px) {
+        .portfolio {
+            .main {
 
-        .header {
-            display: flex;
-            align-items: center;
-            width: 100vw;
+                /* ========================================
+               SECCIÓN HERO (BEM)
+               ======================================== */
+                .hero {
+                    .hero__container {
+                        .hero__title {
+                            font-size: var(--font-size-5xl);
+                        }
 
-            .header__container {
-                width: 100%;
-
-                .header__logo {
-                    width: 350px;
-                    gap: 20px;
-                    display: flex;
-
-                    a {
-                        img {
-                            width: 100%;
-                            transition: transform var(--transition-normal);
+                        .hero__buttons {
+                            flex-direction: row;
+                            justify-content: center;
                         }
                     }
                 }
 
-                .nav {
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                }
+
             }
         }
-
-
     }
-}
+
+    /* RESPONSIVE GRID PARA TABLET  @media (min-width: 768px) {*/
+    @media (min-width: 768px) {
+        .portfolio {
+            .header {
+                .header__container {
+                    .header__menu-button {
+                        display: none;
+                    }
+
+                    .nav {
+                        position: static;
+                        transform: none;
+                        opacity: 1;
+                        visibility: visible;
+                        box-shadow: none;
+                        background: transparent;
+
+                        .nav__list {
+                            display: flex;
+                            padding: 0;
+                            gap: var(--spacing-lg);
+
+                            .nav__item {
+                                border: none;
+
+                                .nav__link {
+                                    padding: var(--spacing-sm) var(--spacing-md);
+                                    border-radius: var(--radius-3xl);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
 
-/* ========================================
+        }
+    }
+
+    /* RESPONSIVE GRID PARA DESKTOP */
+    @media (min-width: 1024px) {
+        .portfolio {
+            grid-template-areas:
+                "header header"
+                "main main"
+                "footer footer";
+
+            .header {
+                display: flex;
+                align-items: center;
+                width: 100vw;
+
+                .header__container {
+                    width: 100%;
+
+                    .header__logo {
+                        width: 350px;
+                        gap: 20px;
+                        display: flex;
+
+                        a {
+                            img {
+                                width: 100%;
+                                transition: transform var(--transition-normal);
+                            }
+                        }
+                    }
+
+                    .nav {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+    /* ========================================
   ANIMACIONES GLOBALES ACTUALILZADOS
 ========================================*/
-@keyframes tech-pulse {
+    @keyframes tech-pulse {
 
-    0%,
-    100% {
-        transform: scale(1);
-        filter: brightness(1);
+        0%,
+        100% {
+            transform: scale(1);
+            filter: brightness(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
     }
 
-    50% {
-        transform: scale(1.05);
-        filter: brightness(1.2);
-    }
-}
+    @keyframes shimmer {
+        0% {
+            background-position: -200% 0;
+        }
 
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+        100% {
+            background-position: 200% 0;
+        }
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
 
-@keyframes underline-expand {
-
-    0%,
-    100% {
-        width: 0;
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    50% {
-        width: 100%;
+    @keyframes underline-expand {
+
+        0%,
+        100% {
+            width: 0;
+        }
+
+        50% {
+            width: 100%;
+        }
     }
-}
