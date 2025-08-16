@@ -829,14 +829,413 @@ body {
                             transform: translateY(-8px);
                             box-shadow: var(--shadow-xl);
                         }
+
+                        .skill-category__title {
+                            font-size: var(--font-size-xl);
+                            font-weight: 600;
+                            color: var(--color-gray-900);
+                            margin-bottom: var(--spacing-lg);
+                            text-align: center;
+                        }
+
+                        .skill {
+                            margin-bottom: var(--spacing-lg);
+
+                            .skill__header {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: var(--spacing-sm);
+
+                                .skill__name {
+                                    font-weight: 500;
+                                    color: var(--color-gray-700);
+                                }
+
+                                .skill__percentage {
+                                    font-size: var(--font-size-sm);
+                                    color: var(--color-gray-500);
+                                    font-family: var(--font-code);
+                                }
+                            }
+
+                            .skill__bar {
+                                height: 8px;
+                                background-color: var(--color-gray-200);
+                                border-radius: var(--radius-full);
+                                overflow: hidden;
+
+                                .skill__progress {
+                                    height: 100%;
+                                    background: linear-gradient(90deg,
+                                            var(--color-primary),
+                                            var(--color-secondary));
+
+                                    border-radius: var(--radius-full);
+                                    transition: width 2s ease-out 0.5s;
+                                    animation: progressAnimation 2s ease-out 0.5s both;
+                                }
+
+                                .skill__progress--html {
+                                    animation-name: progressHTML;
+                                }
+
+                                .skill__progress--css {
+                                    animation-name: progressCSS;
+                                }
+
+                                .skill__progress--js {
+                                    animation-name: progressJS;
+                                }
+
+                                .skill__progress--react {
+                                    animation-name: progressReact;
+                                }
+
+                                .skill__progress--node {
+                                    animation-name: progressNode;
+                                }
+
+                                .skill__progress--git {
+                                    animation-name: progressGit;
+                                }
+                            }
+
+
+                        }
+
+
                     }
                 }
+            }
+        }
+
+        /* ========================================
+               SECCIÓN TESTIMONIOS (BEM)
+        ======================================== */
+
+        .testimonials {
+            padding: var(--spacing-4xl) var(--spacing-md);
+            /* background-color: var(--color-white); */
+            /* background-color: #1d4ed8; */
+
+            .testimonials__container {
+                max-width: 1280px;
+                margin: 0 auto;
+                background-color: #4caf50;
+
+                .testimonials__header {
+                    text-align: center;
+                    margin-bottom: var(--spacing-3xl);
+
+                    .testimonials__title {
+                        font-size: var(--font-size-3xl);
+                        font-weight: bold;
+                        color: var(--color-gray-900);
+                        margin-bottom: var(--spacing-md);
+                        position: relative;
+                        display: inline-block;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -8px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background: linear-gradient(90deg,
+                                    var(--color-secondary-dark),
+                                    var(--color-gray-800),
+                                    var(--color-terceary));
+                            animation: underline-expand 2s ease-in-out infinite;
+                        }
+                    }
+                }
+
+                .testimonials__grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: var(--spacing-xl);
+
+                    .testimonial {
+                        /* background-color: var(--color-gray-50); */
+                        background-color: pink;
+                        padding: var(--spacing-xl);
+                        border-radius: var(--radius-xl);
+                        position: relative;
+                        transition: var(--transition-normal);
+                        border-left: 4px solid var(--color-primary);
+
+                        &:hover {
+                            transform: translateY(-5px);
+                            box-shadow: var(--shadow-lg);
+                        }
+
+                        .testimonial__quote {
+                            font-size: var(--font-size-lg);
+                            color: var(--color-gray-700);
+                            font-style: italic;
+                            margin-bottom: var(--spacing-lg);
+                            line-height: 1.7;
+                        }
+
+                        .testimonial__author {
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-md);
+
+                            .testimonial__avatar {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: var(--radius-full);
+                                background-color: var(--color-gray-300);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: var(--font-size-sm);
+                                color: var(--color-gray-600);
+                                font-weight: 600;
+
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: var(--radius-full);
+                                    object-fit: cover;
+                                }
+                            }
+
+                        }
+
+                        .testimonial__info {
+                            h4 {
+                                font-weight: 600;
+                                color: var(--color-gray-900);
+                                margin-bottom: var(--spacing-xs);
+                            }
+
+                            p {
+                                font-size: var(--font-size-sm);
+                                color: var(--color-gray-500);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* ========================================
+       SECCIÓN CONTACTO (BEM)
+        ======================================== */
+        .contact {
+            padding: var(--spacing-4xl) var(--spacing-md);
+            background: linear-gradient(135deg,
+                    var(--color-gray-900) 0%,
+                    var(--color-gray-800) 100%);
+            color: var(--color-white);
+
+            .contact__container {
+                max-width: 1280px;
+                margin: 0 auto;
+                display: grid;
+                gap: var(--spacing-3xl);
+
+                .contact__header {
+                    text-align: center;
+
+                    .contact__title {
+                        font-size: var(--font-size-3xl);
+                        margin-bottom: var(--spacing-md);
+                        position: relative;
+                        font-weight: bold;
+                        display: inline-block;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -8px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background: linear-gradient(90deg, #00ff88, #00ccff);
+                            animation: underline-expand 2s ease-in-out infinite;
+                        }
+
+                    }
+
+                    .contact__subtitle {
+                        font-size: var(--font-size-lg);
+                        opacity: 0.8;
+                    }
+
+
+                }
+
+                /* FORMULARIO DE CONTACTO */
+                .contact__content {
+                    display: grid;
+                    gap: var(--spacing-xl);
+
+                    .contact__info {
+                        display: grid;
+                        gap: var(--spacing-lg);
+
+                        .contact-item {
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-md);
+                            padding: var(--spacing-lg);
+                            background-color: rgba(255, 255, 255, 0.1);
+                            border-radius: var(--radius-lg);
+                            transition: var(--transition-normal);
+                            backdrop-filter: blur(10px);
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.2);
+                                transform: translateX(8px);
+                            }
+                        }
+                    }
+
+                    .contact__form {
+                        background-color: rgba(255, 255, 255, 0.1);
+                        padding: var(--spacing-xl);
+                        border-radius: var(--radius-xl);
+
+                        backdrop-filter: blur(10px);
+                    }
+
+                    .form {
+                        display: grid;
+                        gap: var(--spacing-lg);
+                    }
+
+                    .form__group {
+                        display: grid;
+                        gap: var(--spacing-sm);
+                    }
+
+                    .form__input,
+                    .form__textarea {
+                        padding: var(--spacing-md);
+                        border: 2px solid rgba(255, 255, 255, 0.2);
+                        border-radius: var(--radius-lg);
+                        background-color: rgba(255, 255, 255, 0.1);
+                        color: var(--color-white);
+                        font-family: var(--font-primary);
+                        font-size: var(--font-size-base);
+                        transition: var(--transition-normal);
+
+                        &:focus {
+                            outline: none;
+                            border-color: var(--color-secondary);
+                            background-color: rgba(255, 255, 255, 0.2);
+                            transform: translateY(-2px);
+                        }
+
+                        &::placeholder {
+                            color: rgba(255, 255, 255, 0.6);
+                        }
+
+                        .form__textarea {
+                            resize: vertical;
+                            min-height: 120px;
+                        }
+                    }
+
+                    .form__button {
+                        background: linear-gradient(135deg,
+                                var(--color-secondary),
+                                var(--color-secondary-dark));
+                        color: var(--color-white);
+                        border: none;
+                        padding: var(--spacing-md) var(--spacing-xl);
+                        border-radius: var(--radius-lg);
+                        font-size: var(--font-size-lg);
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: var(--transition-normal);
+                        justify-self: start;
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: var(--shadow-xl);
+                            background: linear-gradient(135deg,
+                                    var(--color-secondary-dark),
+                                    var(--color-secondary));
+                        }
+                    }
+                }
+
             }
 
 
         }
+
+
+
     }
+
+    /* ========================================
+   FOOTER (BEM)
+   ======================================== */
+    .footer {
+        grid-area: footer;
+        background-color: var(--color-gray-900);
+        color: var(--color-white);
+        padding: var(--spacing-xl) var(--spacing-md);
+        text-align: center;
+
+        .footer__container {
+            max-width: 1280px;
+            margin: 0 auto;
+
+            .footer__social {
+                display: flex;
+                justify-content: center;
+                gap: var(--spacing-lg);
+                margin-bottom: var(--spacing-lg);
+
+                .social-link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    background-color: var(--color-gray-800);
+                    border-radius: var(--radius-full);
+                    color: var(--color-white);
+                    text-decoration: none;
+                    transition: var(--transition-normal);
+                    font-size: var(--font-size-lg);
+
+                    &:hover {
+                        background-color: var(--color-primary);
+                        transform: translateY(-3px) scale(1.1);
+                    }
+                }
+            }
+
+            .footer__text {
+                opacity: 0.7;
+                font-size: var(--font-size-sm);
+            }
+        }
+    }
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 
 /* ========================================
@@ -942,10 +1341,18 @@ body {
                 }
             }
         }
-
-
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /* ========================================
@@ -1000,13 +1407,19 @@ body {
 }
 
 /*** ANIMACIONES PARA LAS BARRAS DE PROGRESO** */
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+}
+
 @keyframes progressHTML {
     to {
         width: 95%;
     }
 }
 
-keyframes progressCSS {
+@keyframes progressCSS {
     to {
         width: 90%;
     }
